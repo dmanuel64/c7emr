@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="ytm-c7emr-wasm" version="1"
+    xmlns="ModInfo">
+    <Properties>
+        <Name>C7EMR - WASM</Name>
+        <Description>Support for Web Assembly (WASM) in Civilization 7.</Description>
+        <Authors>youngtacomanny</Authors>
+        <AffectsSavedGames>0</AffectsSavedGames>
+    </Properties>
+    <Dependencies>
+    </Dependencies>
+    <References>
+    </References>
+    <ActionCriteria>
+        <Criteria id="always">
+            <AlwaysMet />
+        </Criteria>
+    </ActionCriteria>
+    <ActionGroups>
+        <ActionGroup id="c7emr-wasm-shell" scope="shell" criteria="always">
+            <Actions>
+                <UIScripts>
+                    <Item>ui/c7emr-wasm.js</Item>
+                </UIScripts>
+            </Actions>
+        </ActionGroup>
+        <ActionGroup id="c7emr-wasm-game" scope="game" criteria="always">
+            <Actions>
+                <UIScripts>
+                    <Item>ui/c7emr-wasm.js</Item>
+                </UIScripts>
+            </Actions>
+        </ActionGroup>
+    </ActionGroups>
+</Mod>

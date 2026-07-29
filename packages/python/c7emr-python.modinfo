@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="ytm-c7emr-wasm" version="1"
+    xmlns="ModInfo">
+    <Properties>
+        <Name>C7EMR - Python</Name>
+        <Description>Support for Python in Civilization 7.</Description>
+        <Authors>youngtacomanny</Authors>
+        <AffectsSavedGames>0</AffectsSavedGames>
+    </Properties>
+    <Dependencies>
+    </Dependencies>
+    <References>
+    </References>
+    <ActionCriteria>
+        <Criteria id="always">
+            <AlwaysMet />
+        </Criteria>
+    </ActionCriteria>
+    <ActionGroups>
+        <ActionGroup id="c7emr-python-shell" scope="shell" criteria="always">
+            <Actions>
+                <UIScripts>
+                    <Item>ui/c7emr-python.js</Item>
+                </UIScripts>
+            </Actions>
+        </ActionGroup>
+        <ActionGroup id="c7emr-python-game" scope="game" criteria="always">
+            <Actions>
+                <UIScripts>
+                    <Item>ui/c7emr-python.js</Item>
+                </UIScripts>
+            </Actions>
+        </ActionGroup>
+    </ActionGroups>
+</Mod>

@@ -1,0 +1,24 @@
+{
+  "name": "c7emr",
+  "version": "1.0.0",
+  "description": "Extended modding runtimes for Sid Meier's Civilization VII",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmanuel64/c7emr.git"
+  },
+  "keywords": [],
+  "author": "Dylan Manuel",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/dmanuel64/c7emr/issues"
+  },
+  "homepage": "https://github.com/dmanuel64/c7emr#readme",
+  "workspaces": [
+    "packages/*"
+  ]
+}
