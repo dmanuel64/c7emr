@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="images/c7emr_logo.png" alt="C7EMR logo" width="200">
+</p>
+
 # Civilization 7 Extended Modding Runtime (C7EMR)
 
 **C7EMR** is a series of Sid Meier's Civilization 7 mods that enhance the modding runtime to allow modders to write in different languages other than JavaScript.
