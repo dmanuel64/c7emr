@@ -23,7 +23,6 @@
             </Properties>
             <Actions>
                 <UIScripts>
-                    <Item>ui/c7emr-wasm-polyfills.js</Item>
                     <Item>ui/c7emr-wasm.js</Item>
                 </UIScripts>
             </Actions>
@@ -34,7 +33,6 @@
             </Properties>
             <Actions>
                 <UIScripts>
-                    <Item>ui/c7emr-wasm-polyfills.js</Item>
                     <Item>ui/c7emr-wasm.js</Item>
                 </UIScripts>
             </Actions>
