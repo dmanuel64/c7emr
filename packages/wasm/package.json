@@ -12,6 +12,7 @@
   "type": "module",
   "dependencies": {
     "fastestsmallesttextencoderdecoder": "^1.0.22",
+    "polyfill-crypto-methods": "^1.0.0",
     "polywasm": "^0.2.0"
   },
   "devDependencies": {

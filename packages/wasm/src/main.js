@@ -5,6 +5,12 @@ import { WebAssembly as PolywasmAPI } from 'polywasm';
 // entry has none of that - pure Uint8Array based, self-installs onto the global
 // object, and already guards for an existing native implementation.
 import 'fastestsmallesttextencoderdecoder/EncoderDecoderTogether.min.js';
+// Civ7's script host also lacks `crypto` entirely (confirmed by testing - Go's
+// wasm_exec.js runtime hard-requires crypto.getRandomValues for its internal
+// seeding). Not cryptographically secure - just enough to satisfy runtimes
+// that need *some* source of randomness, not security-sensitive use. Self-
+// installs onto the global object, only filling in methods that are missing.
+import 'polyfill-crypto-methods';
 
 // Civ7's script host has no native WebAssembly. Only install the polyfill if
 // one isn't already present, in case that ever changes.
