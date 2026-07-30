@@ -1,19 +1,10 @@
+// Civ7's script host has no native WebAssembly
 import { WebAssembly as PolywasmAPI } from 'polywasm';
-// The package's default entry point (`module`/`main` fields) is a Node-oriented
-// build with unguarded `Buffer` access that crashes in a browser-like sandbox
-// with neither `Buffer` nor native TextEncoder/TextDecoder. The `browser` field
-// entry has none of that - pure Uint8Array based, self-installs onto the global
-// object, and already guards for an existing native implementation.
+// Civ7's script host lacks TextEncoder/TextDecoder. Self-installs only if missing
 import 'fastestsmallesttextencoderdecoder/EncoderDecoderTogether.min.js';
-// Civ7's script host also lacks `crypto` entirely (confirmed by testing - Go's
-// wasm_exec.js runtime hard-requires crypto.getRandomValues for its internal
-// seeding). Not cryptographically secure - just enough to satisfy runtimes
-// that need *some* source of randomness, not security-sensitive use. Self-
-// installs onto the global object, only filling in methods that are missing.
+// Civ7's script host also lacks `crypto`. Self-installs only if missing
 import 'polyfill-crypto-methods';
 
-// Civ7's script host has no native WebAssembly. Only install the polyfill if
-// one isn't already present, in case that ever changes.
 if (typeof globalThis.WebAssembly === 'undefined') {
     globalThis.WebAssembly = PolywasmAPI;
 }
@@ -65,17 +56,9 @@ function fetchText(path, onLoad, onError) {
 }
 
 /**
- * Loads a wasm-bindgen (`--target no-modules`) module: loads its glue (same
- * path with `_bg.wasm` replaced by `.js` - wasm-bindgen's own default layout)
- * as a real `src`-based <script> element (not eval - eval's `let`/`const`
- * bindings don't survive past the eval call, but a real script tag's do; and
- * not an inline injected script either - the glue reads `document.
- * currentScript.src` and Civ7 throws trying to parse an empty one, so it
- * needs a real `src` to resolve against), then fetches the `.wasm` bytes and
- * initializes it. Because the glue's own top-level code only runs once this
- * is actually called - well after WebAssembly/TextEncoder/TextDecoder are
- * already installed above - this never races the way loading it as a plain
- * <UIScripts> item would.
+ * Loads a wasm-bindgen (`--target no-modules`) module: loads its glue as a
+ * real `<script src>` (needed for `document.currentScript.src` to resolve),
+ * then fetches the `.wasm` bytes and initializes it.
  *
  * @param {string} path path to the `_bg.wasm` file, e.g. "my-mod/ui/my_crate_bg.wasm"
  * @returns {Promise<void>}
@@ -112,6 +95,4 @@ globalThis.C7EMR = Object.assign(globalThis.C7EMR || {}, {
     loadWasm
 });
 
-console.warn(
-    `[c7emr-wasm] loaded at ${Date.now()}; WebAssembly=${typeof globalThis.WebAssembly} TextDecoder=${typeof globalThis.TextDecoder} TextEncoder=${typeof globalThis.TextEncoder}`
-);
+console.log('[c7emr] WASM module loaded');
