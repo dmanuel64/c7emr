@@ -145,3 +145,6 @@ vite.config.ts.timestamp-*
 # VSCode
 .vscode
 *.code-workspace
+
+# WASM package bundle
+packages/wasm/ui/c7emr-wasm.js

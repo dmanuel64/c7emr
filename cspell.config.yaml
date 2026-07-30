@@ -3,6 +3,7 @@ ignorePaths: []
 dictionaryDefinitions: []
 dictionaries: []
 words:
+  - polywasm
   - youngtacomanny
 ignoreWords: []
 import: []

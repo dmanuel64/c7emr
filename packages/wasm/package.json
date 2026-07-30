@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup --config"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +12,11 @@
   "type": "module",
   "dependencies": {
     "polywasm": "^0.2.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^29.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-wasm": "^6.2.2",
+    "rollup": "^4.62.3"
   }
 }
