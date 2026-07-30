@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="../../images/c7emr_wasm_logo.png" alt="C7EMR logo" width="200">
+</p>
+
 # C7EMR - WASM
 
 **C7EMR - WASM** is the WebAssembly (WASM) mod for [C7EMR](../../README.md). It lets you write Civilization 7 mods in any language that compiles to WebAssembly, instead of JavaScript.
