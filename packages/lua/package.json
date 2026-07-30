@@ -1,14 +1,14 @@
 {
   "name": "c7emr-lua",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Lua modding runtime for Sid Meier's Civilization VII",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Dylan Manuel",
+  "license": "MIT",
   "type": "module",
   "dependencies": {
     "fengari-web": "^0.1.4"

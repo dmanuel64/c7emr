@@ -1,14 +1,14 @@
 {
   "name": "c7emr-python",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Python modding runtime for Sid Meier's Civilization VII",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Dylan Manuel",
+  "license": "MIT",
   "type": "module",
   "dependencies": {
     "brython": "^3.14.3"

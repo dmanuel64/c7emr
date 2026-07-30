@@ -1,21 +1,18 @@
 {
   "name": "c7emr-wasm",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "WebAssembly modding runtime for Sid Meier's Civilization VII",
+  "private": true,
   "scripts": {
     "build": "rollup --config"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Dylan Manuel",
+  "license": "MIT",
   "type": "module",
   "dependencies": {
     "fastestsmallesttextencoderdecoder": "^1.0.22",
     "polyfill-crypto-methods": "^1.0.0",
     "polywasm": "^0.2.0"
-  },
-  "devDependencies": {
-    "@rollup/plugin-wasm": "^6.2.2"
   }
 }
