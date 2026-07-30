@@ -13,20 +13,28 @@
     </References>
     <ActionCriteria>
         <Criteria id="always">
-            <AlwaysMet />
+            <AlwaysMet></AlwaysMet>
         </Criteria>
     </ActionCriteria>
     <ActionGroups>
         <ActionGroup id="c7emr-wasm-shell" scope="shell" criteria="always">
+            <Properties>
+                <LoadOrder>0</LoadOrder>
+            </Properties>
             <Actions>
                 <UIScripts>
+                    <Item>ui/c7emr-wasm-polyfills.js</Item>
                     <Item>ui/c7emr-wasm.js</Item>
                 </UIScripts>
             </Actions>
         </ActionGroup>
         <ActionGroup id="c7emr-wasm-game" scope="game" criteria="always">
+            <Properties>
+                <LoadOrder>0</LoadOrder>
+            </Properties>
             <Actions>
                 <UIScripts>
+                    <Item>ui/c7emr-wasm-polyfills.js</Item>
                     <Item>ui/c7emr-wasm.js</Item>
                 </UIScripts>
             </Actions>
