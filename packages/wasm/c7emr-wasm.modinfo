@@ -3,7 +3,9 @@
     xmlns="ModInfo">
     <Properties>
         <Name>C7EMR - WASM</Name>
-        <Description>Support for Web Assembly (WASM) in Civilization 7.</Description>
+        <Description>Lets Civ7 mod creators write mods in
+            WebAssembly-compiled languages instead of JavaScript. Adds no content by itself - other
+            mods will list this as a requirement if they need it.</Description>
         <Authors>youngtacomanny</Authors>
         <AffectsSavedGames>0</AffectsSavedGames>
     </Properties>

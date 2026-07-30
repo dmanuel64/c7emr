@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Mod id="ytm-c7emr-wasm" version="1"
+<Mod id="ytm-c7emr-lua" version="1"
     xmlns="ModInfo">
     <Properties>
         <Name>C7EMR - Lua</Name>
-        <Description>Support for Lua in Civilization 7.</Description>
+        <Description>Lets Civ7 mod creators write mods in Lua instead of JavaScript. Adds no content
+            by itself - other mods will list this as a requirement if they need it.</Description>
         <Authors>youngtacomanny</Authors>
         <AffectsSavedGames>0</AffectsSavedGames>
     </Properties>
