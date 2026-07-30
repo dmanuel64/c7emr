@@ -5,7 +5,7 @@
 ## Status
 
 - ✅ **Rust** (via [wasm-bindgen](https://wasm-bindgen.github.io/wasm-bindgen/)) - confirmed working end-to-end.
-- ⚠️ **Go** (its standard `js/wasm` target) - Go's runtime boots and runs plain computation fine, but any code using `syscall/js` (the mechanism Go uses to call *into* JavaScript - `console.log`, DOM access, etc.) currently panics. This traces back to a bug in how [polywasm](https://github.com/evanw/polywasm) (the WebAssembly polyfill this mod uses) interprets a specific instruction pattern Go's compiler emits.
+- ⚠️ **Go** (its standard `js/wasm` target) - plain computation works, but calling into JavaScript (`syscall/js`) panics, likely due to a polywasm bug. See the [Go guide](docs/go.md) for details.
 - Other toolchains (C/C++ via Emscripten, C#, AssemblyScript, etc.) - untested. Should work if they stick to standard WebAssembly and don't lean on APIs beyond what's listed below, but that's not guaranteed.
 
 ## Why this mod exists
