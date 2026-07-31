@@ -9,7 +9,7 @@
 ![Steam File Size](https://img.shields.io/steam/size/3774895923)
 ![Steam Update Date](https://img.shields.io/steam/update-date/3774895923)
 
-**C7EMR - Lua** is the Lua mod for [C7EMR](../../README.md). It lets you write Civilization 7 mods in Lua instead of JavaScript, running on [Fengari](https://fengari.io/), a Lua 5.3 VM written in pure JS.
+**C7EMR - Lua** is the Lua mod for [C7EMR](../../README.md). It lets you write Civilization 7 mods in Lua instead of JavaScript, running on [Fengari](https://github.com/fengari-lua/fengari), a Lua 5.3 VM written in pure JS.
 
 ## Using this mod from your own mod
 
