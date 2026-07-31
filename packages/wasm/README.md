@@ -2,6 +2,11 @@
   <img src="../../images/c7emr_wasm_logo.png" alt="C7EMR logo" width="200">
 </p>
 
+![Steam Subscriptions](https://img.shields.io/steam/subscriptions/3774624010)
+![Steam Favorites](https://img.shields.io/steam/favorites/3774624010)
+![Steam File Size](https://img.shields.io/steam/size/3774624010)
+![Steam Update Date](https://img.shields.io/steam/update-date/3774624010)
+
 # C7EMR - WASM
 
 **C7EMR - WASM** is the WebAssembly (WASM) mod for [C7EMR](../../README.md). It lets you write Civilization 7 mods in any language that compiles to WebAssembly, instead of JavaScript.
