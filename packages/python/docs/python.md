@@ -15,7 +15,7 @@ Copy it, unmodified, into your mod's `ui/` folder.
 
 ## 2. Wire it up in your `.modinfo`
 
-Don't declare your `.py` files as `<UIScripts>`. This mod's loader (`C7EMR.loadPython`, below) fetches and compiles them itself; loading them as ordinary scripts would just have Coherent try (and fail) to parse Python as JS. Declare them as `<ImportFiles>` instead:
+Don't declare your `.py` files as `<UIScripts>`. This mod's loader (`C7EMR.loadPython`, below) fetches and compiles them itself:
 
 ```xml
 <Dependencies>
@@ -65,4 +65,4 @@ Every `C7EMR.loadPython` call runs against the same Brython VM, so top-level nam
 
 ## Calling into JS from Python
 
-Brython's built-in [`browser`](https://brython.info/static_doc/en/browser.html) package (bundled in `brython_stdlib.js`) is the normal way to reach into the DOM/JS from Python, e.g. `from browser import window`. This hasn't been exercised against Coherent GT's actual script host yet - treat it as unverified until you've tried it against the real game.
+Use Brython's built-in [`browser`](https://brython.info/static_doc/en/browser.html) package, e.g. `from browser import window`.

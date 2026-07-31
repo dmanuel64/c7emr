@@ -16,7 +16,7 @@ Copy it, unmodified, into your mod's `ui/` folder.
 
 ## 2. Wire it up in your `.modinfo`
 
-Don't declare your `.lua` files as `<UIScripts>`. This mod's loader (`C7EMR.loadLua`, below) fetches and compiles them itself once its own script has run; loading them as ordinary scripts would just have Coherent try (and fail) to parse Lua as JS. Declare them as `<ImportFiles>` instead:
+Don't declare your `.lua` files as `<UIScripts>`. This mod's loader (`C7EMR.loadLua`, below) fetches and compiles them itself once its own script has run:
 
 ```xml
 <Dependencies>
@@ -58,13 +58,11 @@ Your entry script is the *only* file declared as `<UIScripts>`. It waits for `C7
 
 ## Calling into JS from Lua
 
-`fengari-web` opens the `js` library by default, so Lua code can reach back into JS globals:
+`fengari-web` opens the `js` library by default, so Lua code can reach back into JS globals - always use `:` (method-call) syntax, never `.`:
 
 ```lua
 js.global.console:log("hello from Lua")
 ```
-
-Prefer `:` (method-call) syntax over `.` when calling into a JS object's methods - dotted calls haven't been fully verified to pass arguments correctly through the interop bridge yet.
 
 ## Sharing state across multiple `loadLua` calls
 

@@ -1,3 +1,24 @@
+// Civ7's script host has no `Intl` global at all. Brython's init code calls
+// `Intl.DateTimeFormat(...).format(date)` twice, unconditionally, at the very
+// top of brython.js (to derive its timezone display name into `$B.tz_name`) -
+// without this, that throw aborts the rest of the classic script outright,
+// so `__BRYTHON__` never finishes setting up and `globalThis.brython` never
+// gets defined. `Intl.DateTimeFormat` is the only `Intl` API brython.js or
+// brython_stdlib.js touch, so this only needs to hand back two distinguishable
+// strings, not real ICU semantics.
+if (typeof globalThis.Intl === 'undefined') {
+    globalThis.Intl = {
+        DateTimeFormat: function (_locale, options) {
+            const long = options && options.timeZoneName === 'long';
+            return {
+                format(date) {
+                    return long ? `${date.toString()} Coordinated Universal Time` : `${date.toString()} UTC`;
+                }
+            };
+        }
+    };
+}
+
 /**
  * Loads a plain classic script from this mod's own files and waits for it to run.
  * Brython must be loaded this way (a real, un-bundled <script> tag) rather than

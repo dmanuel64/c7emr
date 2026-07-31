@@ -12,5 +12,8 @@
   "type": "module",
   "dependencies": {
     "brython": "^3.14.3"
+  },
+  "devDependencies": {
+    "regexpu-core": "^6.4.0"
   }
 }
