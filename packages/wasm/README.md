@@ -43,4 +43,4 @@ The general shape is the same regardless of language:
 
 ## Steam Workshop
 
-<!-- TODO: link to the published Steam Workshop page -->
+- <https://steamcommunity.com/sharedfiles/filedetails/?id=3774624010>
