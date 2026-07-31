@@ -4,6 +4,11 @@
 
 # C7EMR - Python
 
+![Steam Subscriptions](https://img.shields.io/steam/subscriptions/3774896712)
+![Steam Favorites](https://img.shields.io/steam/favorites/3774896712)
+![Steam File Size](https://img.shields.io/steam/size/3774896712)
+![Steam Update Date](https://img.shields.io/steam/update-date/3774896712)
+
 **C7EMR - Python** is the Python mod for [C7EMR](../../README.md). It lets you write Civilization 7 mods in Python instead of JavaScript, running on [Brython](https://brython.info/), a Python 3 implementation that compiles Python to JS in the browser.
 
 ## Status
@@ -24,4 +29,4 @@ See the [Python guide](docs/python.md) for the full walkthrough.
 
 ## Steam Workshop
 
-<!-- TODO: link to the published Steam Workshop page -->
+- <https://steamcommunity.com/sharedfiles/filedetails/?id=3774896712>
