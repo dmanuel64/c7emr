@@ -9,5 +9,5 @@
 ## Mods
 
 - [x] [**c7emr-wasm**](packages/wasm/README.md) - for developing in compiled languages such as Rust or C++. Confirmed working end-to-end for Rust; see its README for current status and caveats.
-- [ ] [**c7emr-lua**](packages/lua/README.md) (**currently work in progress**) - for developing in Lua
-- [ ] [**c7emr-python**](packages/python/README.md) (**currently work in progress**) - for developing in Python
+- [x] [**c7emr-lua**](packages/lua/README.md) - for developing in Lua
+- [x] [**c7emr-python**](packages/python/README.md) - for developing in Python
