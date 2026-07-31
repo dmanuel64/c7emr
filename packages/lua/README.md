@@ -4,6 +4,11 @@
 
 # C7EMR - Lua
 
+![Steam Subscriptions](https://img.shields.io/steam/subscriptions/3774895923)
+![Steam Favorites](https://img.shields.io/steam/favorites/3774895923)
+![Steam File Size](https://img.shields.io/steam/size/3774895923)
+![Steam Update Date](https://img.shields.io/steam/update-date/3774895923)
+
 **C7EMR - Lua** is the Lua mod for [C7EMR](../../README.md). It lets you write Civilization 7 mods in Lua instead of JavaScript, running on [Fengari](https://fengari.io/), a Lua 5.3 VM written in pure JS.
 
 ## Using this mod from your own mod
@@ -16,4 +21,4 @@ See the [Lua guide](docs/lua.md) for the full walkthrough.
 
 ## Steam Workshop
 
-<!-- TODO: link to the published Steam Workshop page -->
+- <https://steamcommunity.com/sharedfiles/filedetails/?id=3774895923>
